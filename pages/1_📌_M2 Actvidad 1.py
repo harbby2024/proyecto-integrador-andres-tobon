@@ -37,5 +37,12 @@ ciudades = pd.Series(['Nueva York', 'Londres', 'París'])
 mi_dataframe = pd.DataFrame({'Nombre': nombres, 'Edad': edades, 'Ciudad': ciudades})
 
 # Imprimir el DataFrame
-print(mi_dataframe))
+df.set_index("Date", inplace=True)
+
+config = {
+    "_index": st.column_config.DateColumn("Month", format="MMM YYYY"),
+    "Total": st.column_config.NumberColumn("Total ($)"),
+}
+
+st.dataframe(df, column_config=config)
 

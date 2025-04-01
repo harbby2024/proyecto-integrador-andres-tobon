@@ -16,7 +16,7 @@ tipos de datos, operadores, y las estructuras de datos más utilizadas como list
 diccionarios y conjuntos.
 """)
 
-st.header("Objetivos de aprendizaje")
+st.header("Familiarizarse con la creación de DataFrames en Pandas y mostrarlos usando Streamlit.")
 
 st.markdown("""
 - Comprender los tipos de datos básicos en Python
@@ -25,5 +25,17 @@ st.markdown("""
 - Aplicar estos conocimientos en ejemplos prácticos
 """)
 
-st.header("Solución")
+st.header( 
+    import pandas as pd
+
+# Crear las Series
+nombres = pd.Series(['Alicia', 'Bob', 'Carlos'])
+edades = pd.Series([25, 30, 28])
+ciudades = pd.Series(['Nueva York', 'Londres', 'París'])
+
+# Crear el DataFrame a partir de las Series
+mi_dataframe = pd.DataFrame({'Nombre': nombres, 'Edad': edades, 'Ciudad': ciudades})
+
+# Imprimir el DataFrame
+print(mi_dataframe))
 

@@ -32,5 +32,5 @@ df_refugio_animales = pd.read_csv("static/datasets/refugio_animales.csv")
 
 st.header("Dataset")
 
-st.df
+st.dfst.dataframe()
 

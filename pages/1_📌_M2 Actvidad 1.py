@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Configuración de la página
-st.set_page_config(   
+st.set_page_config(
     page_icon="📌",
     layout="wide"
 )
@@ -24,9 +24,4 @@ st.markdown("""
 - Dominar las estructuras de datos fundamentales
 - Aplicar estos conocimientos en ejemplos prácticos
 """)
-
-st.header( 
-
-)
-
 

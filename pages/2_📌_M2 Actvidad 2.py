@@ -10,20 +10,18 @@ st.set_page_config(
 st.title("Momento 2 - Actividad 2")
 
 st.header("Descripción de la actividad")
-st.markdown("""
-Esta actividad es una introducción práctica a Python y a las estructuras de datos básicas.
-En ella, exploraremos los conceptos fundamentales de Python y aprenderemos a utilizar variables,
-tipos de datos, operadores, y las estructuras de datos más utilizadas como listas, tuplas,
-diccionarios y conjuntos.
+st.markdown("""Usando el dataset estudiantes_colombia.csv, crea una aplicación en Streamlit que permita al usuario:
+Ver las primeras 5 filas y las últimas 5 filas del dataset.
+Mostrar un resumen con .info() y .describe().
+Seleccionar columnas específicas (ej. "nombre", "edad", "promedio") para mostrarlas.
+Filtrar estudiantes con promedio mayor a un valor definido por el usuario (usando un slider).
 """)
 
 st.header("Objetivos de aprendizaje")
 
 st.markdown("""
-- Comprender los tipos de datos básicos en Python
-- Aprender a utilizar variables y operadores
-- Dominar las estructuras de datos fundamentales
-- Aplicar estos conocimientos en ejemplos prácticos
+- Inspección y resumen de datos en dataset usando los métodos básicos como .head(), .tail(), .info(), .describe().
+- Filtrado básico de filas y columnas
 """)
 
 st.header("Solución Actividad #2 segundo momento")

@@ -32,7 +32,7 @@ df_refugio_animales = pd.read_csv("static/estudiantes_colombia.csv")
 
 st.header("hola")
 
-st.dataframe()
+st.dataframe(df_refugio_animales)
 
 
 

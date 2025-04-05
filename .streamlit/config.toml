@@ -9,6 +9,7 @@ font = "sans serif"
 headless = true
 enableCORS = false
 enableXsrfProtection = true
+enableStaticServing = true
 
 [browser]
 gatherUsageStats = false

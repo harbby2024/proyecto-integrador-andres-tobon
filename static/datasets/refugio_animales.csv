@@ -1,0 +1,22 @@
+id,especie,edad,peso,estado_salud,adoptado
+1,Perro,3,15.5,Saludable,Sí
+2,Gato,1,4.2,En tratamiento,No
+3,Perro,5,20.0,Saludable,Sí
+4,Conejo,2,1.8,Recuperándose,No
+5,Perro,4,18.0,Saludable,Sí
+6,Gato,2,5.0,En tratamiento,No
+7,Perro,6,22.5,Saludable,Sí
+8,Gato,3,6.1,Recuperándose,No
+9,Conejo,1,1.5,Saludable,Sí
+10,Perro,2,14.0,En tratamiento,No
+11,Gato,4,5.8,Saludable,Sí
+12,Perro,7,25.0,Recuperándose,No
+13,Conejo,3,2.0,Saludable,Sí
+14,Perro,1,12.0,En tratamiento,No
+15,Gato,5,6.5,Saludable,Sí
+16,Perro,3,16.0,Recuperándose,No
+17,Gato,2,4.8,Saludable,Sí
+18,Conejo,4,2.2,En tratamiento,No
+19,Perro,5,19.5,Saludable,Sí
+20,Gato,1,4.0,Recuperándose,No
+

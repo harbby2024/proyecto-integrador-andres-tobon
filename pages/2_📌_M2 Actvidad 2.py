@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Configuración de la página
 st.set_page_config(   
@@ -26,4 +27,6 @@ st.markdown("""
 """)
 
 st.header("Solución")
+
+df_refugio_animales =pd.read_csv("static\datasets/refugio_animales.csv")
 

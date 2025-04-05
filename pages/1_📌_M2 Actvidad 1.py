@@ -26,17 +26,7 @@ st.markdown("""
 """)
 
 st.header( 
-    import pandas as pd
 
-# Crear las Series
-nombres = pd.Series(['Alicia', 'Bob', 'Carlos'])
-edades = pd.Series([25, 30, 28])
-ciudades = pd.Series(['Nueva York', 'Londres', 'París'])
-
-# Crear el DataFrame a partir de las Series
-mi_dataframe = pd.DataFrame({'Nombre': nombres, 'Edad': edades, 'Ciudad': ciudades})
-
-# Imprimir el DataFrame
-st.dataframe(df, column_config=config)
 )
+
 

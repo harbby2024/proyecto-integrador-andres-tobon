@@ -43,6 +43,8 @@ st.text(df_estudiantes_colombia.info())
 st.subheader("Estadísticas descriptivas")
 st.write(df_estudiantes_colombia.describe())
 
+st.subheader("Columnas especificas nombre, edad y promedio")
+st.write(df_estudiantes_colombia[["nombre", "edad","promedio"]])
 
 
 

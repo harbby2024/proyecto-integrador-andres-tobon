@@ -34,7 +34,7 @@ st.header("Data base estudiantes Colombia")
 
 st.dataframe(df_estudiantes_colombia)
 
-st.suheader("Primeras 5 filas Dataset estudiantes Colombia")
+st.subheader("Primeras 5 filas Dataset estudiantes Colombia")
 
 st.write(st.head(5))
 

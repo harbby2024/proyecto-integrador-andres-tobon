@@ -26,13 +26,19 @@ st.markdown("""
 - Aplicar estos conocimientos en ejemplos prácticos
 """)
 
-st.header("Solución")
+st.header("Solución Actividad #2 segundo momento")
 
 df_estudiantes_colombia = pd.read_csv("static/estudiantes_colombia.csv")
 
-st.header("hola")
+st.header("Data base estudiantes Colombia")
 
 st.dataframe(df_estudiantes_colombia)
+
+st.suheader("Primeras 5 filas Dataset estudiantes Colombia")
+
+st.write(st.head(5))
+
+
 
 
 

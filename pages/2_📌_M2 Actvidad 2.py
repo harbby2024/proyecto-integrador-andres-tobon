@@ -31,12 +31,19 @@ st.header("Solución Actividad #2 segundo momento")
 df_estudiantes_colombia = pd.read_csv("static/estudiantes_colombia.csv")
 
 st.header("Data base estudiantes Colombia")
-
 st.dataframe(df_estudiantes_colombia)
 
 st.subheader("Primeras 5 filas Dataset estudiantes Colombia")
+st.write(df_estudiantes_colombia.head(5))
 
-st.write(st.head(5))
+st.subheader("Ultimas 3 filas Dataset estudiantes Colombia")
+st.write(df_estudiantes_colombia.tail(3))
+
+st.subheader("Información Dataset estudiantes Colombia")
+st.text(df_estudiantes_colombia.info())
+
+st.subheader("Estadísticas descriptivas")
+st.write(df_estudiantes_colombia.describe())
 
 
 

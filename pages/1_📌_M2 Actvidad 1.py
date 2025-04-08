@@ -20,11 +20,11 @@ diccionarios y conjuntos.
 st.header("Objetivo de la actividad")
 st.markdown("Familiarizarse con la creación de DataFrames en Pandas y mostrarlos usando Streamlit.")
 
-st.header("DataFrames desde diferentes fuentes:")
+st.title("DataFrames desde diferentes fuentes:")
 st.subheader("DataFrames desde Diccionario")
 info_libros ={"Titulo": ["Harry Potter y la piedra filosofa", "Lucky boy", "Atravez de ti","La Riqueza de las naciones"], 
             "Autor":["J. K. Rowling", "Shanthi Sekeran", "Ariana Godoy", "Adam Smith "], 
-            "Año de publicación":[2000, 2017, 2021, 1992], 
+            "Año de publicación":["2000", "2017", "2021", "1992"], 
             "Genero":["Ficción", "Drama" , "Romantica" , "Política" ]}
 
 df_libros = pd.DataFrame(info_libros)
@@ -40,7 +40,7 @@ poblacion_ciudades =[{"Nombre":"Tokio", "Población": "37,3 millones de habitant
 
 df_poblacion_ciudades = pd.DataFrame(poblacion_ciudades)
 
-st.title("Población de las ciudades más grandes del mundo")
+st.subheader("Población de las ciudades más grandes del mundo")
 st.dataframe(df_poblacion_ciudades)
 
 

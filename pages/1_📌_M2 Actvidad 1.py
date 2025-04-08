@@ -51,13 +51,10 @@ st.dataframe(df_poblacion_ciudades)
 
 st.subheader("DataFrames desde lista de lista")
 
-inventario = [["sudadera manga larga", 20.000, 60],
-            ["Jogger dama", 150.000, 120]
-            ["Camiseta tipo polo", 90.000, 73]
-            ]
+inventario = [["sudadera manga larga", 20.000, 60], ["Jogger dama", 150.000, 120], ["Camiseta tipo polo", 90.000, 73]]
 
 df_inventario = pd.DataFrame(inventario, columns=["Nombre de producto", "Precio", "Stock"])
-st.write(df_inventario)
+st.dataframe(df_inventario)
 
 #nombre del producto, precio y cantidad en stock
 #Convierte esta lista en un DataFrame con Pandas, especificando los nombres de las columnas (pista: usa el parámetro columns en la función de creación).

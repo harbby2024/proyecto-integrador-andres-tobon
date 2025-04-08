@@ -46,6 +46,7 @@ st.write(df_estudiantes_colombia.describe())
 st.subheader("Columnas especificas nombre, edad y promedio")
 st.write(df_estudiantes_colombia[["nombre", "edad","promedio"]])
 
+st.subheader("Estudiantes con promedio mayor")
+st.write(df_estudiantes_colombia[["nombre", "edad","promedio"]])
 
-
-
+valor = st.selectbox(input("¿Quiere ver los valores mayores a? "))

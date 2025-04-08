@@ -50,5 +50,7 @@ st.subheader("Estudiantes con promedio mayor")
 st.write(df_estudiantes_colombia[["nombre", "edad","promedio"]])
 
 st.subheader("Filtra estudiantes con promedio mayor")
-valor = st.selectbox("¿Quiere ver los valores mayores a?", options=[10, 20, 30, 40, 50])
-st.write(f"Has seleccionado: {valor}")
+valor_minimo = st.slider("Selecciona el promedio mínimo", min_value=0.0, max_value=5.0, value=4.0, step=0.1)
+df_filtrado = df_estudiantes_colombia[df_estudiantes_colombia['promedio'] > valor_minimo]
+st.write(f"Estudiantes con promedio mayor a {valor_minimo}:")
+st.dataframe(df_filtrado)

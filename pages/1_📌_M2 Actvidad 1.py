@@ -23,9 +23,9 @@ st.markdown("Familiarizarse con la creación de DataFrames en Pandas y mostrarlo
 st.header("DataFrames desde diferentes fuentes:")
 st.subheader("DataFrames desde Diccionario")
 info_libros ={"Titulo": ["Harry Potter y la piedra filosofa", "Lucky boy", "Atravez de ti","La Riqueza de las naciones"]},
-{ "Autor": ["J. K. Rowling", "Shanthi Sekeran", "Ariana Godoy", "Adam Smith "] },
-{ "Año de publicación":[2000, 2017, 2021, 1992] },
-{"Genero":["Ficción", "Drama" , "Romantica" , "Política" ]},
+            { "Autor": ["J. K. Rowling", "Shanthi Sekeran", "Ariana Godoy", "Adam Smith "] },
+            { "Año de publicación":[2000, 2017, 2021, 1992] },
+            {"Genero":["Ficción", "Drama" , "Romantica" , "Política" ]},
 
 df_libros = pd.DataFrame(info_libros)
 st.write(df_libros)
@@ -41,11 +41,7 @@ poblacion_ciudades =[{"Nombre":"Tokio", "Población": "37,3 millones de habitant
 df_poblacion_ciudades = pd.DataFrame(poblacion_ciudades)
 
 st.write(df_poblacion_ciudades)
-st.write(df_poblacion_ciudades.describe())
+st.write(df_poblacion_ciudades.info())
 
 
 
-
-
-# nombre poblacion y pais 
-#En Streamlit, escribe un texto descriptivo como "Información de Ciudades" y muestra el DataFrame resultante con st.dataframe().

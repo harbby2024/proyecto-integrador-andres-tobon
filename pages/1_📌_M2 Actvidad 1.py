@@ -40,8 +40,8 @@ poblacion_ciudades =[{"Nombre":"Tokio", "Población": "37,3 millones de habitant
 
 df_poblacion_ciudades = pd.DataFrame(poblacion_ciudades)
 
-st.write(df_poblacion_ciudades)
-st.write(df_poblacion_ciudades.info())
+st.title("Población de las ciudades más grandes del mundo")
+st.dataframe(df_poblacion_ciudades)
 
 
 

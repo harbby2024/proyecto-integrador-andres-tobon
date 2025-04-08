@@ -38,7 +38,8 @@ st.subheader("Ultimas 3 filas Dataset estudiantes Colombia")
 st.write(df_estudiantes_colombia.tail(3))
 
 st.subheader("Información Dataset estudiantes Colombia")
-st.text(df_estudiantes_colombia.info())
+df_estudiantes_colombia.info()
+st.text(df_estudiantes_colombia) 
 
 st.subheader("Estadísticas descriptivas")
 st.write(df_estudiantes_colombia.describe())

@@ -24,9 +24,9 @@ st.header("DataFrames desde diferentes fuentes:")
 st.subheader("Diccionario")
 
 info_libros =[{"Titulo":"Harry Potter y la piedra filosofa", "Autor": "J. K. Rowling", "Año de publicación": 2000, "Genero": "Ficción" },
-              {"Titulo":"Lucky boy", "Autor": "Shanthi Sekeran", "Año de publicación": 2017, "Genero": "Drama" },
-              {"Titulo":"Atravez de ti", "Autor": "Ariana Godoy", "Año de publicación": 2021, "Genero": "Romantica" },
-              {"Titulo":"La Riqueza de las naciones", "Autor": "Adam Smith ", "Año de publicación": 1992, "Genero": "Política" },]
+            {"Titulo":"Lucky boy", "Autor": "Shanthi Sekeran", "Año de publicación": 2017, "Genero": "Drama" },
+            {"Titulo":"Atravez de ti", "Autor": "Ariana Godoy", "Año de publicación": 2021, "Genero": "Romantica" },
+            {"Titulo":"La Riqueza de las naciones", "Autor": "Adam Smith ", "Año de publicación": 1992, "Genero": "Política" },]
 
 df_libros = pd.DataFrame(info_libros)
 

@@ -38,8 +38,7 @@ st.subheader("Ultimas 3 filas Dataset estudiantes Colombia")
 st.write(df_estudiantes_colombia.tail(3))
 
 st.subheader("Información Dataset estudiantes Colombia")
-df_estudiantes_colombia.info()
-st.text(df_estudiantes_colombia) 
+st.text(df_estudiantes_colombia.info()) 
 
 st.subheader("Estadísticas descriptivas")
 st.write(df_estudiantes_colombia.describe())
@@ -50,4 +49,5 @@ st.write(df_estudiantes_colombia[["nombre", "edad","promedio"]])
 st.subheader("Estudiantes con promedio mayor")
 st.write(df_estudiantes_colombia[["nombre", "edad","promedio"]])
 
-valor = st.selectbox(input("¿Quiere ver los valores mayores a? "))
+valor = st.selectbox("¿Quiere ver los valores mayores a?", options=[10, 20, 30, 40, 50])
+st.write(f"Has seleccionado: {valor}")

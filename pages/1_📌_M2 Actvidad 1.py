@@ -21,14 +21,31 @@ st.header("Objetivo de la actividad")
 st.markdown("Familiarizarse con la creación de DataFrames en Pandas y mostrarlos usando Streamlit.")
 
 st.header("DataFrames desde diferentes fuentes:")
-st.subheader("Diccionario")
-
-info_libros =[{"Titulo":"Harry Potter y la piedra filosofa", "Autor": "J. K. Rowling", "Año de publicación": 2000, "Genero": "Ficción" },
-            {"Titulo":"Lucky boy", "Autor": "Shanthi Sekeran", "Año de publicación": 2017, "Genero": "Drama" },
-            {"Titulo":"Atravez de ti", "Autor": "Ariana Godoy", "Año de publicación": 2021, "Genero": "Romantica" },
-            {"Titulo":"La Riqueza de las naciones", "Autor": "Adam Smith ", "Año de publicación": 1992, "Genero": "Política" },]
+st.subheader("DataFrames desde Diccionario")
+info_libros ={"Titulo": ["Harry Potter y la piedra filosofa", "Lucky boy", "Atravez de ti","La Riqueza de las naciones"]},
+{ "Autor": ["J. K. Rowling", "Shanthi Sekeran", "Ariana Godoy", "Adam Smith "] },
+{ "Año de publicación":[2000, 2017, 2021, 1992] },
+{"Genero":["Ficción", "Drama" , "Romantica" , "Política" ]},
 
 df_libros = pd.DataFrame(info_libros)
-
 st.write(df_libros)
 st.write(df_libros.describe())
+
+st.subheader("DataFrames desde Lista de Diccionario")
+
+poblacion_ciudades =[{"Nombre":"Tokio", "Población": "37,3 millones de habitantes.", "Pais":"Japón"},
+            {"Nombre":"Delhi", "Población": "29,3 millones de habitantes. ​", "Pais":"India" },
+            {"Nombre":"Shanghái", "Población": "26,3 millones de habitantes.", "Pais":"China" },
+            {"Nombre":"São Paulo", "Población": "22 millones de habitantes.", "Pais":"Brasil"},]
+
+df_poblacion_ciudades = pd.DataFrame(poblacion_ciudades)
+
+st.write(df_poblacion_ciudades)
+st.write(df_poblacion_ciudades.describe())
+
+
+
+
+
+# nombre poblacion y pais 
+#En Streamlit, escribe un texto descriptivo como "Información de Ciudades" y muestra el DataFrame resultante con st.dataframe().

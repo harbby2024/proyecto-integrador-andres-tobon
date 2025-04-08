@@ -30,4 +30,4 @@ info_libros =[{"Titulo":"Harry Potter y la piedra filosofa", "Autor": "J. K. Row
 
 df_libros = pd.DataFrame(info_libros)
 
-st.write(df_libros)
+st.write(df_libros.describe)

@@ -31,17 +31,7 @@ df_libros = pd.DataFrame(info_libros)
 st.write(df_libros)
 st.write(df_libros.describe())
 
-st.subheader("DataFrames desde Lista de Diccionario")
 
-poblacion_ciudades =[{"Nombre":"Tokio", "Población": "37,3 millones de habitantes.", "Pais":"Japón"},
-            {"Nombre":"Delhi", "Población": "29,3 millones de habitantes. ​", "Pais":"India" },
-            {"Nombre":"Shanghái", "Población": "26,3 millones de habitantes.", "Pais":"China" },
-            {"Nombre":"São Paulo", "Población": "22 millones de habitantes.", "Pais":"Brasil"},]
-
-df_poblacion_ciudades = pd.DataFrame(poblacion_ciudades)
-
-st.title("Población de las ciudades más grandes del mundo")
-st.dataframe(df_poblacion_ciudades)
 
 
 

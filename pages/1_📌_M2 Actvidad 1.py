@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Configuración de la página
 st.set_page_config(
@@ -6,7 +7,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("Momento 2 - Actividad 1")
+st.title("Momento 2 - Actividad 1 - Creación de DataFrames")
 
 st.header("Descripción de la actividad")
 st.markdown("""
@@ -16,7 +17,8 @@ tipos de datos, operadores, y las estructuras de datos más utilizadas como list
 diccionarios y conjuntos.
 """)
 
-st.header("Familiarizarse con la creación de DataFrames en Pandas y mostrarlos usando Streamlit.")
+st.header("Objetivo de la actividad")
+st.markdown("Familiarizarse con la creación de DataFrames en Pandas y mostrarlos usando Streamlit.")
 
 st.markdown("""
 - Comprender los tipos de datos básicos en Python
@@ -25,4 +27,15 @@ st.markdown("""
 - Aplicar estos conocimientos en ejemplos prácticos
 """)
 
-st.header("Esto es un cambio ")
+st.header("DataFrames desde diferentes fuentes:")
+st.subheader("Diccionario")
+
+info_libros =[{"Titulo":"Harry Potter y la piedra filosofa", "Autor": "J. K. Rowling", "Año de publicación": 2000, "Genero": "Ficción" },
+              {"Titulo":"Lucky boy", "Autor": "Shanthi Sekeran", "Año de publicación": 2017, "Genero": "Drama" },
+              {"Titulo":"Atravez de ti", "Autor": "Ariana Godoy", "Año de publicación": 2021, "Genero": "Romantica" },
+              {"Titulo":"La Riqueza de las naciones", "Autor": "Adam Smith ", "Año de publicación": 1992, "Genero": "Política" },
+              ]
+
+df_libros = pd.DataFlame(info_libros)
+
+print(df_libros)

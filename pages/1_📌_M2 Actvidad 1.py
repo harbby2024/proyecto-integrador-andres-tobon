@@ -20,13 +20,6 @@ diccionarios y conjuntos.
 st.header("Objetivo de la actividad")
 st.markdown("Familiarizarse con la creación de DataFrames en Pandas y mostrarlos usando Streamlit.")
 
-st.markdown("""
-- Comprender los tipos de datos básicos en Python
-- Aprender a utilizar variables y operadores
-- Dominar las estructuras de datos fundamentales
-- Aplicar estos conocimientos en ejemplos prácticos
-""")
-
 st.header("DataFrames desde diferentes fuentes:")
 st.subheader("Diccionario")
 
@@ -37,4 +30,4 @@ info_libros =[{"Titulo":"Harry Potter y la piedra filosofa", "Autor": "J. K. Row
 
 df_libros = pd.DataFrame(info_libros)
 
-print(df_libros)
+st.write(df_libros)

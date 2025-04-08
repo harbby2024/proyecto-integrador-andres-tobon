@@ -21,8 +21,7 @@ st.header("Objetivos de aprendizaje")
 
 st.markdown("""
 - Inspección y resumen de datos en dataset usando los métodos básicos como .head(), .tail(), .info(), .describe().
-- Filtrado básico de filas y columnas
-""")
+- Filtrado básico de filas y columnas """)
 
 st.header("Solución Actividad #2 segundo momento")
 

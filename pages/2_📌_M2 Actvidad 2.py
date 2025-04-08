@@ -49,5 +49,6 @@ st.write(df_estudiantes_colombia[["nombre", "edad","promedio"]])
 st.subheader("Estudiantes con promedio mayor")
 st.write(df_estudiantes_colombia[["nombre", "edad","promedio"]])
 
+st.subheader("Filtra estudiantes con promedio mayor")
 valor = st.selectbox("¿Quiere ver los valores mayores a?", options=[10, 20, 30, 40, 50])
 st.write(f"Has seleccionado: {valor}")

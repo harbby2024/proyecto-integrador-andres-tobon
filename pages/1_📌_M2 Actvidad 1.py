@@ -200,7 +200,8 @@ with st.expander("👀 Ver el código fuente"):
 
 st.subheader("DataFrames desde URL")
 
-datos = pd.read_csv("https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition")
+url = "https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv"
+datos = pd.read_csv(url)
 st.dataframe(datos)
 
 #Vista de codigo -- Actividad 1 punto 08 URL

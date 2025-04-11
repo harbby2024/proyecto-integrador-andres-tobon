@@ -25,7 +25,6 @@ st.markdown("Familiarizarse con la creación de DataFrames en Pandas y mostrarlo
 st.title("DataFrames desde diferentes fuentes:")
 st.subheader("DataFrames desde Diccionario")
 
-with st.code():
 info_libros ={"Titulo": ["Harry Potter y la piedra filosofa", "Lucky boy", "Atravez de ti","La Riqueza de las naciones"], 
             "Autor":["J. K. Rowling", "Shanthi Sekeran", "Ariana Godoy", "Adam Smith "], 
             "Año de publicación":[2000, 2017, 2021, 1992], 
@@ -34,7 +33,25 @@ info_libros ={"Titulo": ["Harry Potter y la piedra filosofa", "Lucky boy", "Atra
 df_libros = pd.DataFrame(info_libros)
 st.write(df_libros)
 st.write(df_libros.describe())
-with st.expander("Ver el código fuente"):
+
+#Vista de codigo 
+
+codigo = '''
+import streamlit as st
+import pandas as pd
+
+info_libros = {
+    "Titulo": ["Harry Potter y la piedra filosofal", "Lucky boy", "A través de ti", "La Riqueza de las Naciones"], 
+    "Autor": ["J. K. Rowling", "Shanthi Sekeran", "Ariana Godoy", "Adam Smith"], 
+    "Año de publicación": [2000, 2017, 2021, 1992], 
+    "Genero": ["Ficción", "Drama", "Romántica", "Política"]
+}
+
+df_libros = pd.DataFrame(info_libros)
+st.write(df_libros)
+st.write(df_libros.describe())
+'''
+with st.expander("👀 Ver el código fuente"):
     st.code(codigo, language='python')
 
 #Actividad 1 punto 02 Dataframes lista de Diccionario

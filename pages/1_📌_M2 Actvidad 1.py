@@ -34,7 +34,7 @@ df_libros = pd.DataFrame(info_libros)
 st.write(df_libros)
 st.write(df_libros.describe())
 
-#Vista de codigo 
+#Vista de codigo -- Actividad 1 punto 01 Dataframes Diccionario
 
 codigo = '''
 import streamlit as st
@@ -68,6 +68,25 @@ df_poblacion_ciudades = pd.DataFrame(poblacion_ciudades)
 st.markdown("Población de las ciudades más grandes del mundo")
 st.dataframe(df_poblacion_ciudades)
 
+#Vista de codigo -- Actividad 1 punto 02 Dataframes lista de Diccionario
+
+codigo = '''
+import streamlit as st
+import pandas as pd
+poblacion_ciudades =[{"Nombre":"Tokio", "Población": "37,3 millones de habitantes.", "Pais":"Japón"},
+            {"Nombre":"Delhi", "Población": "29,3 millones de habitantes. ​", "Pais":"India" },
+            {"Nombre":"Shanghái", "Población": "26,3 millones de habitantes.", "Pais":"China" },
+            {"Nombre":"São Paulo", "Población": "22 millones de habitantes.", "Pais":"Brasil"},]
+
+df_poblacion_ciudades = pd.DataFrame(poblacion_ciudades)
+
+st.markdown("Población de las ciudades más grandes del mundo")
+st.dataframe(df_poblacion_ciudades)
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')
+
+
 #Actividad 1 punto 03 Lista de Lista
 
 st.subheader("DataFrames desde lista de lista")
@@ -76,6 +95,20 @@ inventario = [["sudadera manga larga", 20.000, 60], ["Jogger dama", 150.000, 120
 
 df_inventario = pd.DataFrame(inventario, columns=["Nombre de producto", "Precio", "Stock"])
 st.dataframe(df_inventario)
+
+#Vista de codigo -- Actividad 1 punto 03 Lista de Lista
+
+codigo = '''
+import streamlit as st
+import pandas as pd
+
+inventario = [["sudadera manga larga", 20.000, 60], ["Jogger dama", 150.000, 120], ["Camiseta tipo polo", 90.000, 73]]
+
+df_inventario = pd.DataFrame(inventario, columns=["Nombre de producto", "Precio", "Stock"])
+st.dataframe(df_inventario)
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')
 
 #Actividad 1 punto 04  Series
 
@@ -88,21 +121,62 @@ ciudades = pd.Series(["Bello", "Sabaneta", "Bello","Bello"])
 info_personas = pd.DataFrame({"Personas":personas , "Edad": edades, "Ciudad":ciudades})
 st.dataframe(info_personas)
 
-#Actividad 1 punto 04  Archivo CSV (local)
+#Vista de codigo -- Actividad 1 punto 04  Series
+
+codigo = '''
+import streamlit as st
+import pandas as pd
+
+personas = pd.Series(["Andrés", "Daniel", "Johana","Esteban"])
+edades = pd.Series([29, 29, 29,32])
+ciudades = pd.Series(["Bello", "Sabaneta", "Bello","Bello"])
+
+info_personas = pd.DataFrame({"Personas":personas , "Edad": edades, "Ciudad":ciudades})
+st.dataframe(info_personas)
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')
+
+
+#Actividad 1 punto 05  Archivo CSV (local)
 
 st.subheader("DataFrames desde Archivo CSV (local)")
 
 data = pd.read_csv('static/datasets/data.csv')
 st.dataframe(data)
 
-#Actividad 1 punto 05  Archivo Excel
+#Vista de codigo -- Actividad 1 punto 05  Archivo CSV (local)
+
+codigo = '''
+import streamlit as st
+import pandas as pd
+
+data = pd.read_csv('static/datasets/data.csv')
+st.dataframe(data)
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')
+
+#Actividad 1 punto 06  Archivo Excel
 
 st.subheader("DataFrames desde Archivo Excel")
 
 dataXlsx = pd.read_excel("static/datasets/data.xlsx")
 st.dataframe(dataXlsx)
 
-#Actividad 1 punto 06  Archivo JASON
+#Vista de codigo -- Actividad 1 punto 06  Archivo Excel
+
+codigo = '''
+import streamlit as st
+import pandas as pd
+
+dataXlsx = pd.read_excel("static/datasets/data.xlsx")
+st.dataframe(dataXlsx)
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')
+
+#Actividad 1 punto 07  Archivo JASON
 
 st.subheader("DataFrames desde Archivo JASON")
 

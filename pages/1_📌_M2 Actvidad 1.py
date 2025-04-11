@@ -71,7 +71,7 @@ st.dataframe(info_personas)
 
 st.subheader("DataFrames desde Archivo CSV (local)")
 
-data = pd.read_csv('static\datasets\data.csv')
+data = pd.read_csv('static/datasets/data.csv')
 st.dataframe(data)
 st.write(data)
 
@@ -79,7 +79,7 @@ st.write(data)
 
 st.subheader("DataFrames desde Archivo Excel")
 
-dataXlsx = pd.read_excel("static\datasets\data.xlsx")
+dataXlsx = pd.read_excel("static/datasets/data.xlsx")
 st.dataframe(dataXlsx)
 st.write(dataXlsx)
 

@@ -74,6 +74,14 @@ st.subheader("DataFrames desde Archivo CSV (local)")
 data = pd.read_csv("data.csv")
 st.dataframe(data)
 
+#Actividad 1 punto 05  Archivo CSV (local)
+
+st.subheader("DataFrames desde Archivo Excel")
+
+dataXlsx = pd.read_excel("data.xlsx")
+st.dataframe(dataXlsx)
+
+
 
 
 #Crea tres Series separadas: una con nombres de personas, otra con sus edades y otra con sus ciudades (asegúrate de que tengan la misma cantidad de elementos, por ejemplo, 4 personas).

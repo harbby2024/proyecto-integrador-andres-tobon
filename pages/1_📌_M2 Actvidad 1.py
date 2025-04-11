@@ -71,14 +71,14 @@ st.dataframe(info_personas)
 
 st.subheader("DataFrames desde Archivo CSV (local)")
 
-data = pd.read_csv('.streamlit\data.csv')
+data = pd.read_csv('static\datasets\data.csv')
 st.dataframe(data)
 
 #Actividad 1 punto 05  Archivo CSV (local)
 
 st.subheader("DataFrames desde Archivo Excel")
 
-dataXlsx = pd.read_excel(".streamlit\data.xlsx")
+dataXlsx = pd.read_excel("static\datasets\data.xlsx")
 st.dataframe(dataXlsx)
 
 

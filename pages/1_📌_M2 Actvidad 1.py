@@ -73,15 +73,19 @@ st.subheader("DataFrames desde Archivo CSV (local)")
 
 data = pd.read_csv('static/datasets/data.csv')
 st.dataframe(data)
-st.write(data)
 
-#Actividad 1 punto 05  Archivo CSV (local)
+#Actividad 1 punto 05  Archivo Excel
 
 st.subheader("DataFrames desde Archivo Excel")
 
 dataXlsx = pd.read_excel("static/datasets/data.xlsx")
 st.dataframe(dataXlsx)
-st.write(dataXlsx)
+
+#Actividad 1 punto 06  Archivo JASON
+
+st.subheader("DataFrames desde Archivo JASON")
+
+
 
 
 

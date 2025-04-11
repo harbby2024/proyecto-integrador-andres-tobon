@@ -78,7 +78,7 @@ st.dataframe(data)
 
 st.subheader("DataFrames desde Archivo Excel")
 
-dataXlsx = pd.read_excel("static\datasets\data.xlsx")
+dataXlsx = pd.read_excel("static/datasets/data.xlsx")
 st.dataframe(dataXlsx)
 
 #Actividad 1 punto 06  Archivo JASON

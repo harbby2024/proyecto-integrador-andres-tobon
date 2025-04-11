@@ -210,7 +210,8 @@ codigo = '''
 import streamlit as st
 import pandas as pd
 
-datos = pd.read_csv("https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition")
+url = "https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv"
+datos = pd.read_csv(url)
 st.dataframe(datos)
 '''
 with st.expander("👀 Ver el código fuente"):

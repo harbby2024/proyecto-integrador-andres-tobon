@@ -71,7 +71,7 @@ st.dataframe(info_personas)
 
 st.subheader("DataFrames desde Archivo CSV (local)")
 
-data = pd.read_csv("data.csv")
+data = pd.read_csv('data.csv')
 st.dataframe(data)
 
 #Actividad 1 punto 05  Archivo CSV (local)

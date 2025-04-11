@@ -73,6 +73,7 @@ st.subheader("DataFrames desde Archivo CSV (local)")
 
 data = pd.read_csv('static\datasets\data.csv')
 st.dataframe(data)
+st.write(data)
 
 #Actividad 1 punto 05  Archivo CSV (local)
 
@@ -80,6 +81,7 @@ st.subheader("DataFrames desde Archivo Excel")
 
 dataXlsx = pd.read_excel("static\datasets\data.xlsx")
 st.dataframe(dataXlsx)
+st.write(dataXlsx)
 
 
 

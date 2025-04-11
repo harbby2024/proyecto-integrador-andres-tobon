@@ -44,7 +44,7 @@ poblacion_ciudades =[{"Nombre":"Tokio", "Población": "37,3 millones de habitant
 
 df_poblacion_ciudades = pd.DataFrame(poblacion_ciudades)
 
-st.subheader("Población de las ciudades más grandes del mundo")
+st.markdown("Población de las ciudades más grandes del mundo")
 st.dataframe(df_poblacion_ciudades)
 
 #Actividad 1 punto 03 Lista de Lista
@@ -71,14 +71,14 @@ st.dataframe(info_personas)
 
 st.subheader("DataFrames desde Archivo CSV (local)")
 
-data = pd.read_csv('data.csv')
+data = pd.read_csv('.streamlit\data.csv')
 st.dataframe(data)
 
 #Actividad 1 punto 05  Archivo CSV (local)
 
 st.subheader("DataFrames desde Archivo Excel")
 
-dataXlsx = pd.read_excel("data.xlsx")
+dataXlsx = pd.read_excel(".streamlit\data.xlsx")
 st.dataframe(dataXlsx)
 
 

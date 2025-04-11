@@ -67,9 +67,14 @@ ciudades = pd.Series(["Bello", "Sabaneta", "Bello","Bello"])
 info_personas = pd.DataFrame({"Personas":personas , "Edad": edades, "Ciudad":ciudades})
 st.dataframe(info_personas)
 
-#Actividad 1 punto 04  Series
+#Actividad 1 punto 04  Archivo CSV (local)
 
-st.subheader("DataFrames desde Series")
+st.subheader("DataFrames desde Archivo CSV (local)")
+
+data = pd.read_csv("data.csv")
+st.dataframe(data)
+
+
 
 #Crea tres Series separadas: una con nombres de personas, otra con sus edades y otra con sus ciudades (asegúrate de que tengan la misma cantidad de elementos, por ejemplo, 4 personas).
 #Combina estas Series en un diccionario donde las claves sean los nombres de las columnas (como "nombre", "edad", "ciudad") y luego crea un DataFrame a partir de ese diccionario.

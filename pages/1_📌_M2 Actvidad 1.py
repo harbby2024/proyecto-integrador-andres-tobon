@@ -196,6 +196,26 @@ with st.expander("👀 Ver el código fuente"):
     st.code(codigo, language='python')
 
 
+#Actividad 1 punto 08 URL
+
+st.subheader("DataFrames desde URL")
+
+datos = pd.read_csv("https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition")
+st.dataframe(datos)
+
+#Vista de codigo -- Actividad 1 punto 08 URL
+
+codigo = '''
+import streamlit as st
+import pandas as pd
+
+datos = pd.read_csv("https://www.worldbank.org/en/programs/icp/brief/foodpricesfornutrition")
+st.dataframe(datos)
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')
+
+
 
 
 

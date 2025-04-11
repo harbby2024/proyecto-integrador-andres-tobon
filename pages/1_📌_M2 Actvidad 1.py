@@ -180,6 +180,21 @@ with st.expander("👀 Ver el código fuente"):
 
 st.subheader("DataFrames desde Archivo JASON")
 
+dato_cliente = pd.read_json(".venv/share/jupyter/nbextensions/pydeck/data.json")
+st.dataframe(dato_cliente)
+
+#Vista de codigo -- Actividad 1 punto 07  Archivo JASON
+
+codigo = '''
+import streamlit as st
+import pandas as pd
+
+dato_cliente = pd.read_json(".venv/share/jupyter/nbextensions/pydeck/data.json")
+st.dataframe(dato_cliente)
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')
+
 
 
 

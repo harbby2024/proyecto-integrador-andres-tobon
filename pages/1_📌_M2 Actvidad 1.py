@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
-import sqlite3 
-from sqlite3 import estudiantes
+from sqlalchemy import estudiantes
 
 # Configuración de la página
 st.set_page_config(
@@ -208,24 +207,9 @@ st.dataframe(datos)
 
 #Vista de codigo -- Actividad 1 punto 08 URL
 
-codigo = '''
-import streamlit as st
-import pandas as pd
-
-url = "https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv"
-datos = pd.read_csv(url)
-st.dataframe(datos)
-'''
-with st.expander("👀 Ver el código fuente"):
-    st.code(codigo, language='python')
-
-#Actividad 1 punto 09 Archivo SQLite
-
-st.subheader("DataFrames desde Archivo SQLite")
-
-estudiantes = sqlite3.connect('estudiantes.db')
-cursor = estudiantes.cursor()
-
+estudiantes = estudiantes("sqlite:///database.sqlite")
+df = pd.read_sql_table("SELECT * FROM tabla")
+st.dataframe(read_sql)
 
 
 

@@ -335,8 +335,10 @@ st.subheader("DataFrames desde MongoDB")
 clientes = pymongo.MongoClient("mongodb+srv://harbby:<db_password>@cluster0.f5ft4fz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") 
 
 db = clientes["clientes_data"]  # Nombre de la base de datos
-coleccion = db["name"]
+coleccion = db["clientes"] 
+documentos = coleccion.find()
 documentos = coleccion.find()
 datos = list(documentos)
 df = pd.DataFrame(datos)
-st.dataframe(coleccion)
+st.write("Datos desde MongoDB")
+st.dataframe(df)

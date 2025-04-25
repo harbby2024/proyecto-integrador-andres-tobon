@@ -336,8 +336,8 @@ st.subheader("DataFrames desde MongoDB")
 clientes = MongoClient("mongodb+srv://harbby:3206912806andres@cluster0.f5ft4fz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 # Seleccionar la base de datos y la colección
-db = clientes["clientes_data"]  # Nombre de la base de datos
-coleccion = db["clientes"]      # Nombre de la colección
+db = clientes["Clientes"]  # Nombre de la base de datos
+coleccion = db["clientes_data"]      # Nombre de la colección
 
 # Recuperar los documentos de la colección
 documentos = coleccion.find()

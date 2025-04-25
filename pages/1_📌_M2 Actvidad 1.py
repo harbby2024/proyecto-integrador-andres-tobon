@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import sqlite3 
+from sqlite3 import estudiantes
 
 # Configuración de la página
 st.set_page_config(
@@ -216,6 +218,14 @@ st.dataframe(datos)
 '''
 with st.expander("👀 Ver el código fuente"):
     st.code(codigo, language='python')
+
+#Actividad 1 punto 09 Archivo SQLite
+
+st.subheader("DataFrames desde Archivo SQLite")
+
+estudiantes = sqlite3.connect('estudiantes.db')
+cursor = estudiantes.cursor()
+
 
 
 

@@ -349,5 +349,4 @@ datos = list(documentos)
 df = pd.DataFrame(datos)
 
 # Mostrar el DataFrame en Streamlit
-st.write("Datos desde MongoDB")
 st.dataframe(df)

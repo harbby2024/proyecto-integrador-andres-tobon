@@ -330,7 +330,7 @@ st.subheader("DataFrames desde Firebase")
 st.subheader("DataFrames desde Base de datos SQLite")
 
 
-#Actividad 1 punto 12 desde MongoDB
+#Actividad 1 punto 12 desde MongoDBdd
 
 st.subheader("DataFrames desde MongoDB")
 db_password = os.getenv("MONGO_PASSWORD")  # Ensure the password is set in your environment variables

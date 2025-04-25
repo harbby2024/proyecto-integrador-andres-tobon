@@ -340,8 +340,10 @@ db = clientes["clientes_data"]  # Nombre de la base de datos
 coleccion = db["clientes"]      # Nombre de la colección
 
 # Recuperar los documentos de la colección
+documentos = coleccion.find()
 
+datos = list(documentos)
 
-df = pd.DataFrame(coleccion)
+df = pd.DataFrame(datos)
 
 st.dataframe(df)

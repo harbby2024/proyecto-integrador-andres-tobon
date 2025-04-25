@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sqlalchemy import estudiantes
+import sqlite3
 
 # Configuración de la página
 st.set_page_config(
@@ -207,12 +207,21 @@ st.dataframe(datos)
 
 #Vista de codigo -- Actividad 1 punto 08 URL
 
-estudiantes = estudiantes("sqlite:///database.sqlite")
-df = pd.read_sql_table("SELECT * FROM tabla")
-st.dataframe(read_sql)
+conn = sqlite3.connect('static/estudiantes.db')
+consulta_sql = "SELECT * FROM mi_tabla"
+cursor = conn.cursor()
+cursor.executemany('''
+INSERT INTO estudiantes (nombre, calificacion) VALUES (?, ?)
+''', [
+    ('Ana', 85),
+    ('Luis', 90),
+    ('Carlos', 78)
+])
+conn.commit()
 
-
-
+df = pd.read_sql(consulta_sql, conn)
+st.dataframe(conn)
+conn.close()
 
 
 

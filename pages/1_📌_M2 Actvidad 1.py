@@ -288,9 +288,9 @@ with st.expander("👀 Ver el código fuente"):
 
 st.subheader("DataFrames Array de NumPy")
 
-cosas = np.array([["zapatos", "camisa", "jeans"],
-                                ["Samsung", "Apple", "Oppo"],
-                                [7, 8, 9]])
+cosas = np.array([["zapatos","Samsung" ,7 ],
+                                ["camisa", "Apple",  8],
+                                ["jeans","Oppo", 9]])
 
 df_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnologia', 'numeros'])
 
@@ -302,9 +302,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-cosas = np.array([["zapatos", "camisa", "jeans"],
-                                ["Samsung", "Apple", "Oppo"],
-                                [7, 8, 9]])
+cosas = np.array([["zapatos","Samsung" ,7 ],
+                                ["camisa", "Apple",  8],
+                                ["jeans","Oppo", 9]])
 
 df_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnologia', 'numeros'])
 

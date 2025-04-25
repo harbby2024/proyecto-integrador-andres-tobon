@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import sqlite3
+import numpy as np
 
 # Configuración de la página
 st.set_page_config(
@@ -283,8 +284,31 @@ conn.close()
 with st.expander("👀 Ver el código fuente"):
     st.code(codigo, language='python')
 
+#Actividad 1 punto 10  Archivo Excel
 
-#Crea tres Series separadas: una con nombres de personas, otra con sus edades y otra con sus ciudades (asegúrate de que tengan la misma cantidad de elementos, por ejemplo, 4 personas).
-#Combina estas Series en un diccionario donde las claves sean los nombres de las columnas (como "nombre", "edad", "ciudad") y luego crea un DataFrame a partir de ese diccionario.
-#En Streamlit, agrega un texto como "Datos de Personas" y usa st.dataframe() para mostrar el DataFrame
+st.subheader("DataFrames Array de NumPy")
 
+cosas = np.array([["zapatos", "camisa", "jeans"],
+                                ["Samsung", "Apple", "Oppo"],
+                                [7, 8, 9]])
+
+cosas_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnologia', 'numeros'])
+
+st.dataframe(cosas)
+
+#Vista de codigo -- Actividad 1 punto 09 Baase de datos SQLite
+codigo = '''
+import streamlit as st
+import pandas as pd
+import numpy as np
+
+cosas = np.array([["zapatos", "camisa", "jeans"],
+                                ["Samsung", "Apple", "Oppo"],
+                                [7, 8, 9]])
+
+cosas_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnologia', 'numeros'])
+
+st.dataframe(cosas)
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')

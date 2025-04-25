@@ -208,7 +208,7 @@ st.dataframe(datos)
 #Vista de codigo -- Actividad 1 punto 08 URL
 
 conn = sqlite3.connect('static/estudiantes.db')
-consulta_sql = ("SELECT * FROM mi_tabla")
+consulta_sql = "SELECT * FROM mi_tabla"
 cursor = conn.cursor()
 cursor.executemany('''
 INSERT INTO estudiantes (nombre, calificacion) VALUES (?, ?)
@@ -221,7 +221,6 @@ conn.commit()
 
 df = pd.read_sql(consulta_sql, conn)
 st.dataframe(conn)
-conn.close()
 
 
 

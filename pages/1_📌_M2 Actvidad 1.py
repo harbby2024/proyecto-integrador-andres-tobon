@@ -206,13 +206,23 @@ datos = pd.read_csv(url)
 st.dataframe(datos)
 
 #Vista de codigo -- Actividad 1 punto 08 URL
+codigo = '''
+import streamlit as st
+import pandas as pd
+
+url = "https://people.sc.fsu.edu/~jburkardt/data/csv/hw_200.csv"
+datos = pd.read_csv(url)
+st.dataframe(datos)
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')
+
+#Actividad 1 punto 09 Base de datos SQLite
+
+st.subheader("DataFrames desde Base de datos SQLite")
 
 conn = sqlite3.connect('static/estudiantes.db')
-
-# Crear un cursor para ejecutar las consultas
 cursor = conn.cursor()
-
-# Crear la tabla si no existe
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS estudiantes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -220,8 +230,6 @@ CREATE TABLE IF NOT EXISTS estudiantes (
     calificacion INTEGER NOT NULL
 )
 ''')
-
-# Insertar los datos en la tabla
 cursor.executemany('''
 INSERT INTO estudiantes (nombre, calificacion) VALUES (?, ?)
 ''', [
@@ -230,22 +238,53 @@ INSERT INTO estudiantes (nombre, calificacion) VALUES (?, ?)
     ('Carlos', 78)
 ])
 
-# Confirmar los cambios
 conn.commit()
-
-# Ejecutar la consulta SQL para seleccionar todos los registros
 consulta_sql = "SELECT * FROM estudiantes"
-
-# Cargar los resultados de la consulta en un DataFrame
 df = pd.read_sql(consulta_sql, conn)
 
-# Mostrar el DataFrame (suponiendo que usas Streamlit)
 import streamlit as st
+
 st.dataframe(df)
 
-# Cerrar la conexión
 conn.close()
 
+#Vista de codigo -- Actividad 1 punto 09 Baase de datos SQLite
+codigo = '''
+import streamlit as st
+import pandas as pd
+import sqlite3
+
+st.subheader("DataFrames desde Base de datos SQLite")
+
+conn = sqlite3.connect('static/estudiantes.db')
+cursor = conn.cursor()
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS estudiantes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    calificacion INTEGER NOT NULL
+)
+''')
+cursor.executemany('''
+INSERT INTO estudiantes (nombre, calificacion) VALUES (?, ?)
+''', [
+    ('Ana', 85),
+    ('Luis', 90),
+    ('Carlos', 78)
+])
+
+conn.commit()
+consulta_sql = "SELECT * FROM estudiantes"
+df = pd.read_sql(consulta_sql, conn)
+
+import streamlit as st
+
+st.dataframe(df)
+
+conn.close()
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')
 
 
 #Crea tres Series separadas: una con nombres de personas, otra con sus edades y otra con sus ciudades (asegúrate de que tengan la misma cantidad de elementos, por ejemplo, 4 personas).

@@ -335,7 +335,9 @@ st.subheader("DataFrames desde MongoDB")
 clientes = pymongo.MongoClient("mongodb+srv://harbby:your_actual_password@cluster0.f5ft4fz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 db = clientes["clientes_data"]  # Nombre de la base de datos
-coleccion = db["clientes"] 
+coleccion = db["clientes"]
+db_password = os.getenv("3206912806andres")  # Ensure the password is set in your environment variables
+connection_string = f"mongodb+srv://harbby:{db_password}@cluster0.f5ft4fz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 documentos = coleccion.find()
 documentos = coleccion.find()
 datos = list(documentos)

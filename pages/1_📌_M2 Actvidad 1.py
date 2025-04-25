@@ -332,7 +332,8 @@ st.subheader("DataFrames desde Base de datos SQLite")
 #Actividad 1 punto 12 desde MongoDB
 
 st.subheader("DataFrames desde MongoDB")
-
+db_password = os.getenv("3206912806andres")  # Ensure the password is set in your environment variables
+connection_string = f"mongodb+srv://harbby:{db_password}@cluster0.f5ft4fz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 clientes = pymongo.MongoClient("mongodb+srv://usuario:contraseña@cluster0.mongodb.net/?retryWrites=true&w=majority")
 
 # Seleccionar la base de datos y la colección

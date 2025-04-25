@@ -332,7 +332,7 @@ st.subheader("DataFrames desde Base de datos SQLite")
 
 st.subheader("DataFrames desde MongoDB")
 
-clientes = pymongo.MongoClient("mongodb+srv://harbby:<db_password>@cluster0.f5ft4fz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") 
+clientes = pymongo.MongoClient("mongodb+srv://harbby:your_actual_password@cluster0.f5ft4fz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 db = clientes["clientes_data"]  # Nombre de la base de datos
 coleccion = db["clientes"] 

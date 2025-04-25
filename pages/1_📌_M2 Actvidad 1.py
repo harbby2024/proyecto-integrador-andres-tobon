@@ -292,9 +292,9 @@ cosas = np.array([["zapatos", "camisa", "jeans"],
                                 ["Samsung", "Apple", "Oppo"],
                                 [7, 8, 9]])
 
-cosas_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnologia', 'numeros'])
+df_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnologia', 'numeros'])
 
-st.dataframe(cosas)
+st.dataframe(df_array)
 
 #Vista de codigo -- Actividad 1 punto 09 Baase de datos SQLite
 codigo = '''
@@ -306,9 +306,9 @@ cosas = np.array([["zapatos", "camisa", "jeans"],
                                 ["Samsung", "Apple", "Oppo"],
                                 [7, 8, 9]])
 
-cosas_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnologia', 'numeros'])
+df_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnologia', 'numeros'])
 
-st.dataframe(cosas)
+st.dataframe(df_array)
 '''
 with st.expander("👀 Ver el código fuente"):
     st.code(codigo, language='python')

@@ -208,8 +208,20 @@ st.dataframe(datos)
 #Vista de codigo -- Actividad 1 punto 08 URL
 
 conn = sqlite3.connect('static/estudiantes.db')
-consulta_sql = "SELECT * FROM mi_tabla"
+
+# Crear un cursor para ejecutar las consultas
 cursor = conn.cursor()
+
+# Crear la tabla si no existe
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS estudiantes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    calificacion INTEGER NOT NULL
+)
+''')
+
+# Insertar los datos en la tabla
 cursor.executemany('''
 INSERT INTO estudiantes (nombre, calificacion) VALUES (?, ?)
 ''', [
@@ -217,10 +229,22 @@ INSERT INTO estudiantes (nombre, calificacion) VALUES (?, ?)
     ('Luis', 90),
     ('Carlos', 78)
 ])
+
+# Confirmar los cambios
 conn.commit()
 
+# Ejecutar la consulta SQL para seleccionar todos los registros
+consulta_sql = "SELECT * FROM estudiantes"
+
+# Cargar los resultados de la consulta en un DataFrame
 df = pd.read_sql(consulta_sql, conn)
-st.dataframe(conn)
+
+# Mostrar el DataFrame (suponiendo que usas Streamlit)
+import streamlit as st
+st.dataframe(df)
+
+# Cerrar la conexión
+conn.close()
 
 
 

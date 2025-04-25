@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import sqlite3
 import numpy as np
+import pymongo
 
 # Configuración de la página
 st.set_page_config(
@@ -292,7 +293,7 @@ cosas = np.array([["zapatos","Samsung" ,7 ],
                                 ["camisa", "Apple",  8],
                                 ["jeans","Oppo", 9]])
 
-df_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnologia', 'numeros'])
+df_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnolog+ia', 'numeros'])
 
 st.dataframe(df_array)
 
@@ -306,9 +307,36 @@ cosas = np.array([["zapatos","Samsung" ,7 ],
                                 ["camisa", "Apple",  8],
                                 ["jeans","Oppo", 9]])
 
-df_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnologia', 'numeros'])
+df_array = pd.DataFrame(cosas, columns=['Ropa', 'Marcas tecnología', 'numeros'])
 
 st.dataframe(df_array)
 '''
 with st.expander("👀 Ver el código fuente"):
     st.code(codigo, language='python')
+
+#Actividad 1 punto 10  desde Firebase
+
+st.subheader("DataFrames desde Firebase")
+
+
+
+
+
+
+#______________________Actividad 1 punto 09 Base de datos SQLite
+
+st.subheader("DataFrames desde Base de datos SQLite")
+
+
+#Actividad 1 punto 12 desde MongoDB
+
+st.subheader("DataFrames desde MongoDB")
+
+clientes = pymongo.MongoClient("https://cloud.mongodb.com/v2/680b2095b52d7e5f9608a097#/metrics/replicaSet/680b21f10d78d75c5e817607/explorer/Clientes/clientes_data/find") 
+
+db = client["clientes_data"]  # Nombre de la base de datos
+coleccion = db["name"]
+documentos = coleccion.find()
+datos = list(documentos)
+df = pd.DataFrame(datos)
+st.dataframe(coleccion)

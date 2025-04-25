@@ -332,15 +332,21 @@ st.subheader("DataFrames desde Base de datos SQLite")
 
 st.subheader("DataFrames desde MongoDB")
 
-clientes = pymongo.MongoClient("mongodb+srv://harbby:your_actual_password@cluster0.f5ft4fz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+clientes = pymongo.MongoClient("mongodb+srv://usuario:contraseña@cluster0.mongodb.net/?retryWrites=true&w=majority")
 
+# Seleccionar la base de datos y la colección
 db = clientes["clientes_data"]  # Nombre de la base de datos
-coleccion = db["clientes"]
-db_password = os.getenv("3206912806andres")  # Ensure the password is set in your environment variables
-connection_string = f"mongodb+srv://harbby:{db_password}@cluster0.f5ft4fz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+coleccion = db["clientes"]      # Nombre de la colección
+
+# Recuperar los documentos de la colección
 documentos = coleccion.find()
-documentos = coleccion.find()
+
+# Convertir los documentos en una lista de diccionarios
 datos = list(documentos)
+
+# Convertir los datos en un DataFrame de Pandas
 df = pd.DataFrame(datos)
+
+# Mostrar el DataFrame en Streamlit
 st.write("Datos desde MongoDB")
 st.dataframe(df)

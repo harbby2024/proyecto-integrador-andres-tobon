@@ -255,16 +255,16 @@ import pandas as pd
 
 conn = sqlite3.connect('static/estudiantes.db')
 cursor = conn.cursor()
-cursor.execute('''
+cursor.execute('
 CREATE TABLE IF NOT EXISTS estudiantes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nombre TEXT NOT NULL,
     calificacion INTEGER NOT NULL
 )
-''')
-cursor.executemany('''
+')
+cursor.executemany('
 INSERT INTO estudiantes (nombre, calificacion) VALUES (?, ?)
-''', [
+', [
     ('Ana', 85),
     ('Luis', 90),
     ('Carlos', 78)

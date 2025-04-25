@@ -249,6 +249,39 @@ st.dataframe(df)
 conn.close()
 
 #Vista de codigo -- Actividad 1 punto 09 Baase de datos SQLite
+codigo = '''
+import streamlit as st
+import pandas as pd
+
+conn = sqlite3.connect('static/estudiantes.db')
+cursor = conn.cursor()
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS estudiantes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    calificacion INTEGER NOT NULL
+)
+''')
+cursor.executemany('''
+INSERT INTO estudiantes (nombre, calificacion) VALUES (?, ?)
+''', [
+    ('Ana', 85),
+    ('Luis', 90),
+    ('Carlos', 78)
+])
+
+conn.commit()
+consulta_sql = "SELECT * FROM estudiantes"
+df = pd.read_sql(consulta_sql, conn)
+
+import streamlit as st
+
+st.dataframe(df)
+
+conn.close()
+'''
+with st.expander("👀 Ver el código fuente"):
+    st.code(codigo, language='python')
 
 
 #Crea tres Series separadas: una con nombres de personas, otra con sus edades y otra con sus ciudades (asegúrate de que tengan la misma cantidad de elementos, por ejemplo, 4 personas).

@@ -342,11 +342,8 @@ coleccion = db["clientes"]      # Nombre de la colección
 # Recuperar los documentos de la colección
 documentos = coleccion.find()
 
-# Convertir los documentos en una lista de diccionarios
 datos = list(documentos)
 
-# Convertir los datos en un DataFrame de Pandas
 df = pd.DataFrame(datos)
 
-# Mostrar el DataFrame en Streamlit
 st.dataframe(df)

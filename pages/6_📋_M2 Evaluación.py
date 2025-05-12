@@ -2,5 +2,13 @@ import streamlit as st
 
 st.title("Momento 2 - Evaluación")
 
-if st.button("Abrir Evaluación 2 momento(https://datostecnologiaexamgit-m7rqr8udpqqmqdmlfampyf.streamlit.app/)"):
-    st.markdown("[Redirigiendo...]", unsafe_allow_html=True)
+st.markdown(
+    """
+    <a href="https://datostecnologiaexamgit-m7rqr8udpqqmqdmlfampyf.streamlit.app/" target="_blank">
+        <button style='font-size:16px;padding:10px 20px;border-radius:8px;background-color:#FF4B4B;color:white;border:none;'>
+            Ir a la Aplicación de Datos
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
